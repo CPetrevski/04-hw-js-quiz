@@ -1,0 +1,89 @@
+body {
+    background-color: #3feee6;
+}
+
+.top-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.highscore {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    padding: 20px 20px;
+    font-size: 25px;
+}
+
+#timer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+    padding: 20px 20px;
+    font-size: 25px;
+}
+
+.start-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start-btn button {
+    font-size: 30px;
+    background-color: #fc4445;
+    color: white;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.card header {
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.card section {
+    padding: 30px;
+}
+
+.card section .question-text {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+section .option-list .option {
+    background: #cafafe;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section .option-list .option:hover {
+    background-color: #fc4445;
+    color: white;
+}
