@@ -1,3 +1,4 @@
+// questions js script page with arrays
 var questions = [
     {
         numb: 1,

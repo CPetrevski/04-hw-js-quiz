@@ -3,6 +3,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+
+    text-align: center;
+}
+
 .top {
     display: flex;
     align-items: center;
@@ -134,7 +139,7 @@ section .option-list .option.disabled {
     border-radius: 15px;
 }
 
-.results button {
+.result button {
     font-size: 30px;
     background-color: #fc4445;
     color: white;
@@ -143,4 +148,13 @@ section .option-list .option.disabled {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
 }

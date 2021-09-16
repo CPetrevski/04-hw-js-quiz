@@ -1,3 +1,4 @@
+// set variables for items on the page
 var startButton = document.querySelector(".start-btn button");
 var cardQuestions = document.querySelector(".card");
 var nextButton = document.querySelector(".next-btn");
@@ -5,6 +6,7 @@ var optionList = document.querySelector(".option-list");
 var timeLeft = document.querySelector(".seconds-left");
 var resultBox = document.querySelector(".result");
 var submitButton = resultBox.querySelector(".submit .submit-btn");
+var userScore = document.querySelector(".user");
 
 
 var highScore = 0;
@@ -12,12 +14,14 @@ var questionNumber = 0;
 var questionPosition = 1;
 var counter = 0;
 
+// function when click start is pressed
 function clickStart() {
     startButton.style.display = "none";
     cardQuestions.style.visibility = "visible";
     resultBox.style.visibility = "hidden";
 }
  
+// listener for start button click
 startButton.addEventListener("click", function() {
     clickStart();
     showQuestions(0);
@@ -25,6 +29,7 @@ startButton.addEventListener("click", function() {
     
 });
 
+// next button action when pressed
 nextButton.addEventListener("click", function() {
     if (questionNumber < questions.length - 1) {
         questionNumber++;
@@ -38,7 +43,7 @@ nextButton.addEventListener("click", function() {
         
 });
 
-
+// shows question box, adds visibility
 function showQuestions(index) {
     var quest = document.querySelector(".question-text");
     
@@ -57,6 +62,7 @@ function showQuestions(index) {
     }
 }
 
+// sets the score and also stops clicks after option is chosen.
 function optionSelected(answer) {
     var userAnswer = answer.textContent;
     var correctAnswer = questions[questionNumber].answer;
@@ -79,6 +85,7 @@ function optionSelected(answer) {
     
 }
 
+// timer function
 function startTimer(time) {
     counter = setInterval(timer, 1000);
     
@@ -92,20 +99,24 @@ function startTimer(time) {
     }
 }
 
+// shows results box when finishes
 function results() {
     cardQuestions.style.visibility = "hidden";
     resultBox.style.visibility = "visible";
     var scoreText = resultBox.querySelector(".score");
     var scoreTag = "<span>Your Score was: " + highScore + "</span>";
     scoreText.innerHTML = scoreTag;
+    
 }
 
+// adds event listener to submit button to go to HighScores page
 submitButton.addEventListener("click", function() {
     submitResults();
     window.location.href = "highscore.html";
     
 });
 
+// fucntion for storing high score in page
 function submitResults() {
-
+    localStorage.setItem("HighScore", highScore)
 }
