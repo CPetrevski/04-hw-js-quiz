@@ -1,8 +1,9 @@
 body {
     background-color: #3feee6;
+    font-family: 'Roboto', sans-serif;
 }
 
-.top-info {
+.top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +17,7 @@ body {
     font-size: 25px;
 }
 
-#timer {
+.timer {
     display: flex;
     justify-content: flex-end;
     align-items: right;
@@ -42,6 +43,26 @@ body {
     cursor: pointer;
 }
 
+.next-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.next-btn button {
+    font-size: 30px;
+    display: flex;
+    background-color: #fc4445;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
     visibility: hidden;
     position: absolute;
@@ -49,7 +70,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .card header {
@@ -86,4 +107,40 @@ section .option-list .option {
 section .option-list .option:hover {
     background-color: #fc4445;
     color: white;
+}
+
+section .option-list .option.correct {
+    background-color: green;
+}
+
+section .option-list .option.incorrect {
+    background-color: red;
+}
+
+section .option-list .option.disabled {
+    pointer-events: none;
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
+}
+
+.results button {
+    font-size: 30px;
+    background-color: #fc4445;
+    color: white;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
