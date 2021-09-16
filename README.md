@@ -32,5 +32,6 @@ THEN I can save my initials and my score
 ## Links ##
 
 ### Repo ###
-
+     https://github.com/CPetrevski/04-hw-js-quiz
 ### Pages ###
+     https://cpetrevski.github.io/04-hw-js-quiz/
